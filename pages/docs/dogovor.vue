@@ -110,6 +110,17 @@
           required
         ></b-form-select>
       </b-form-group>
+      <b-form-group
+        label="Дополнительная информация:"
+        label-for="input-7"
+      >
+        <b-form-textarea
+          id="input-7"
+          placeholder="Введите текст..."
+          rows="6"
+          v-model.trim="form.dopinfo.text"
+        ></b-form-textarea>
+      </b-form-group>
       <b-button type="submit" class="mt-4" block variant="primary">Отправить</b-button>
     </b-form>
   </div>
@@ -151,6 +162,11 @@ export default {
           status: null,
           error: '',
         },
+        dopinfo: {
+          text: '',
+          status: true,
+          error: '',
+        },
       },
       dismissSecs: 5,
       dismissCountDown: 0,
@@ -173,6 +189,7 @@ export default {
           email: this.form.email.text,
           site: this.form.site.text || 'Нет сайта',
           docs: this.form.docs.text,
+          dopinfo: this.form.dopinfo.text || 'Договорник решил не писать дополнительную информацию',
         })
           .then((response) => {
             if(response.status === 200) {
@@ -187,6 +204,7 @@ export default {
               this.form.site.text = ''
               this.form.docs.text = 'С обычным договором'
               this.form.docs.status = null
+              this.form.dopinfo.text = ''
               this.variant = 'success'
               this.showAlert()
             }
