@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section class="section">
     <b-alert
       v-if="variant === 'success'"
       :show="dismissCountDown"
@@ -32,8 +32,8 @@
         height="4px"
       ></b-progress>
     </b-alert>
-    <h2 class="mt-5">Анкета для заключения договора</h2>
-    <b-form class="mt-4 mb-5" @submit.prevent.stop="submitHandler">
+    <h2>Анкета для заключения договора</h2>
+    <b-form class="mt-4" @submit.prevent.stop="submitHandler">
       <b-form-group
         label="Ваша организация:"
         label-for="input-1"
@@ -123,7 +123,7 @@
       </b-form-group>
       <b-button type="submit" class="mt-4" block variant="primary">Отправить</b-button>
     </b-form>
-  </div>
+  </section>
 </template>
 
 <script>

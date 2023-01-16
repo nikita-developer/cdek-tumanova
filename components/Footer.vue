@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="dark" variant="info">
+  <b-navbar class="bg-dark" toggleable="lg" type="dark">
     <b-navbar-brand to="/">Сdek-Tumanova</b-navbar-brand>
   </b-navbar>
 </template>

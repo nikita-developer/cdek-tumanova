@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h2 class="mt-5">Главная страница</h2>
+    <h2>Главная страница</h2>
   </section>
 </template>
 
