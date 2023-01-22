@@ -290,7 +290,7 @@
                 }
                 this.$v.$touch()
                 if(!this.$v.$invalid) {
-                    this.$axios.post('https://cdek-tumanova.ru/backend/public/api/dogovorIp', {
+                    this.$axios.post('https://cdek-tumanova.ru/backend/public/api/dogovor-ip', {
                         fio: this.form.fio,
                         inn: this.form.inn,
                         adress: this.form.adress,
