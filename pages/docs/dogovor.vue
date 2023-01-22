@@ -8,7 +8,7 @@
       @dismiss-count-down="countDownChanged"
       class="mt-5"
     >
-      <p>Спасибо за заявку, в ближайшее время мы  с вами свяжемся</p>
+      <p>Спасибо за заявку, в ближайшее время мы с вами свяжемся</p>
       <b-progress
         variant="success"
         :max="dismissSecs"

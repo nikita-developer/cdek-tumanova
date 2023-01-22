@@ -1580,6 +1580,25 @@
   optionalDependencies:
     "prettier" "^1.18.2 || ^2.0.0"
 
+"@vue/devtools-api@^6.1.4":
+  "integrity" "sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q=="
+  "resolved" "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.5.0.tgz"
+  "version" "6.5.0"
+
+"@vuelidate/core@^2.0.0":
+  "integrity" "sha512-xIFgdQlScO0aaSZ0wTGPJh8YcTMNAj5veI8yPgiAyxOT+GV7vNQFiU1vpYWCL4cklkkhYvRRSC2OEX7YOZNmPQ=="
+  "resolved" "https://registry.npmjs.org/@vuelidate/core/-/core-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "vue-demi" "^0.13.11"
+
+"@vuelidate/validators@^2.0.0":
+  "integrity" "sha512-fQQcmDWfz7pyH5/JPi0Ng2GEgNK1pUHn/Z/j5rG/Q+HwhgIXvJblTPcZwKOj1ABL7V4UVuGKECvZCDHNGOwdrg=="
+  "resolved" "https://registry.npmjs.org/@vuelidate/validators/-/validators-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "vue-demi" "^0.13.11"
+
 "@webassemblyjs/ast@1.11.1":
   "integrity" "sha512-ukBh14qFLjxTQNTXocdyksN5QdM28S1CxHt2rdskFyL+xFV7VremuBLVbmCePj+URalXBENx/9Lm7lnhihtCSw=="
   "resolved" "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.11.1.tgz"
@@ -8182,6 +8201,13 @@
   "resolved" "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   "version" "1.1.2"
 
+"vee-validate@^4.7.3":
+  "integrity" "sha512-1MwHLOzCrabSeChySZVVMamWStcucM1hHxapoebY9mJ7KWOvncMG19a7AlPl38zpE9pcD+G3CHKLvviGmTl5BQ=="
+  "resolved" "https://registry.npmjs.org/vee-validate/-/vee-validate-4.7.3.tgz"
+  "version" "4.7.3"
+  dependencies:
+    "@vue/devtools-api" "^6.1.4"
+
 "vendors@^1.0.0":
   "integrity" "sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w=="
   "resolved" "https://registry.npmjs.org/vendors/-/vendors-1.0.4.tgz"
@@ -8204,6 +8230,11 @@
   "integrity" "sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA=="
   "resolved" "https://registry.npmjs.org/vue-client-only/-/vue-client-only-2.1.0.tgz"
   "version" "2.1.0"
+
+"vue-demi@^0.13.11":
+  "integrity" "sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A=="
+  "resolved" "https://registry.npmjs.org/vue-demi/-/vue-demi-0.13.11.tgz"
+  "version" "0.13.11"
 
 "vue-functional-data-merge@^3.1.0":
   "integrity" "sha512-leT4kdJVQyeZNY1kmnS1xiUlQ9z1B/kdBFCILIjYYQDqZgLqCLa0UhjSSeRX6c3mUe6U5qYeM8LrEqkHJ1B4LA=="
@@ -8285,6 +8316,11 @@
   dependencies:
     "@vue/compiler-sfc" "2.7.14"
     "csstype" "^3.1.0"
+
+"vuelidate@^0.7.7":
+  "integrity" "sha512-pT/U2lDI67wkIqI4tum7cMSIfGcAMfB+Phtqh2ttdXURwvHRBJEAQ0tVbUsW9Upg83Q5QH59bnCoXI7A9JDGnA=="
+  "resolved" "https://registry.npmjs.org/vuelidate/-/vuelidate-0.7.7.tgz"
+  "version" "0.7.7"
 
 "vuex@^3.6.2":
   "integrity" "sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw=="
