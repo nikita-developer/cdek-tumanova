@@ -36,16 +36,16 @@
                 height="4px"
             ></b-progress>
         </b-alert>
-        <h2>Анкета для заключения договора ИП</h2>
+        <h2>Анкета для заключения договора Юр. лицо</h2>
         <b-form class="mt-4" @submit.prevent="submitHandler">
             <b-form-group
-                label="ФИО (индивидуального предпринимателя):"
+                label="Наименование:"
                 label-for="input-1"
             >
                 <b-form-input
                     id="input-1"
                     type="text"
-                    placeholder="Введите ФИО"
+                    placeholder="Введите название"
                     v-model="$v.form.fio.$model"
                     :state="$v.form.fio.$dirty ? !$v.form.fio.$invalid : null"
                 ></b-form-input>
@@ -66,19 +66,6 @@
                 <b-form-invalid-feedback v-if="!$v.form.inn.numeric && $v.form.inn.required">Должны быть только цифры</b-form-invalid-feedback>
                 <b-form-invalid-feedback v-if="!$v.form.inn.minLength && $v.form.inn.required && $v.form.inn.numeric">Это поле не должно быть меньше 10 цифр</b-form-invalid-feedback>
             </b-form-group>
-            <b-form-group
-                label="Юридический адрес:"
-                label-for="input-14"
-            >
-                <b-form-input
-                    id="input-14"
-                    type="text"
-                    placeholder="Введите адрес"
-                    v-model="$v.form.yradress.$model"
-                    :state="$v.form.yradress.$dirty ? !$v.form.yradress.$invalid : null"
-                ></b-form-input>
-                <b-form-invalid-feedback v-if="!$v.form.yradress.required">Это поле не должно быть пустым</b-form-invalid-feedback>
-            </b-form-group>
             <b-form-group label="Фактический адрес отличается?" v-slot="{ ariaDescribedby }">
                 <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="Отличается">Отличается</b-form-radio>
                 <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="Не отличается">Не отличается</b-form-radio>
@@ -96,6 +83,27 @@
                     :state="$v.form.adress.$dirty ? !$v.form.adress.$invalid : null"
                 ></b-form-input>
                 <b-form-invalid-feedback v-if="!$v.form.adress.required">Это поле не должно быть пустым</b-form-invalid-feedback>
+            </b-form-group>
+            <b-form-group
+                label="Номер свидетельства (не обязательно)"
+                label-for="input-4"
+            >
+                <b-form-input
+                    id="input-4"
+                    type="text"
+                    placeholder="Введите номер"
+                    v-model="form.numSvid"
+                ></b-form-input>
+            </b-form-group>
+            <b-form-group
+                label="Дата выдачи свидетельства (не обязательно)"
+                label-for="input-5"
+            >
+                <b-form-datepicker
+                    id="input-5"
+                    v-model="form.dateSvid"
+                    placeholder="Выберите дату"
+                ></b-form-datepicker>
             </b-form-group>
             <b-form-group
                 label="БИК банка:"
@@ -128,10 +136,10 @@
             </b-form-group>
             <b-form-group
                 label="ФИО заполнителя анкеты:"
-                label-for="input-7"
+                label-for="input-8"
             >
                 <b-form-input
-                    id="input-7"
+                    id="input-8"
                     type="text"
                     placeholder="Введите ФИО"
                     v-model="$v.form.fioAutor.$model"
@@ -141,10 +149,10 @@
             </b-form-group>
             <b-form-group
                 label="ФИО директора:"
-                label-for="input-8"
+                label-for="input-9"
             >
                 <b-form-input
-                    id="input-8"
+                    id="input-9"
                     type="text"
                     v-model="$v.form.fioDirector.$model"
                     :state="$v.form.fioDirector.$dirty ? !$v.form.fioDirector.$invalid : null"
@@ -153,10 +161,10 @@
             </b-form-group>
             <b-form-group
                 label="Основания действий директора:"
-                label-for="input-9"
+                label-for="input-10"
             >
                 <b-form-input
-                    id="input-9"
+                    id="input-10"
                     type="text"
                     v-model="$v.form.osnovanija.$model"
                     :state="$v.form.osnovanija.$dirty ? !$v.form.osnovanija.$invalid : null"
@@ -165,10 +173,10 @@
             </b-form-group>
             <b-form-group
                 label="Телефон:"
-                label-for="input-10"
+                label-for="input-11"
             >
                 <b-form-input
-                    id="input-10"
+                    id="input-11"
                     type="text"
                     placeholder="Введите телефон"
                     v-model="$v.form.phone.$model"
@@ -180,10 +188,10 @@
             </b-form-group>
             <b-form-group
                 label="Email:"
-                label-for="input-11"
+                label-for="input-12"
             >
                 <b-form-input
-                    id="input-11"
+                    id="input-12"
                     type="text"
                     placeholder="Введите email"
                     v-model="$v.form.email.$model"
@@ -194,10 +202,10 @@
             </b-form-group>
             <b-form-group
                 label="Сайт (не обязательно)"
-                label-for="input-12"
+                label-for="input-13"
             >
                 <b-form-input
-                    id="input-12"
+                    id="input-13"
                     type="text"
                     placeholder="Введите ссылку на ваш сайт"
                     v-model="form.site"
@@ -205,10 +213,10 @@
             </b-form-group>
             <b-form-group
                 label="Комментарий (не обязательно)"
-                label-for="input-13"
+                label-for="input-14"
             >
                 <b-form-textarea
-                    id="input-13"
+                    id="input-14"
                     placeholder="Введите текст..."
                     rows="6"
                     v-model.trim="form.dopinfo"
@@ -221,7 +229,7 @@
 <script>
     import { required, minLength, numeric, email } from 'vuelidate/lib/validators'
     export default {
-        name: 'dogovorIp',
+        name: 'dogovorYr',
         data () {
             return {
                 dismissSecs: 5,
@@ -231,8 +239,9 @@
                 form: {
                     fio: null,
                     inn: null,
-                    yradress: null,
                     adress: null,
+                    numSvid: null,
+                    dateSvid: null,
                     bik: null,
                     cheque: null,
                     fioAutor: null,
@@ -254,9 +263,6 @@
                     required,
                     minLength: minLength(10),
                     numeric,
-                },
-                yradress: {
-                    required
                 },
                 adress: {
                     required
@@ -303,11 +309,12 @@
                 }
                 this.$v.$touch()
                 if(!this.$v.$invalid) {
-                    this.$axios.post('https://cdek-tumanova.ru/backend/public/api/dogovor-ip', {
+                    this.$axios.post('https://cdek-tumanova.ru/backend/public/api/dogovor-yr', {
                         fio: this.form.fio,
                         inn: this.form.inn,
-                        yradress: this.form.yradress,
                         adress: this.form.adress,
+                        numSvid: this.form.numSvid || 'Не указано',
+                        dateSvid: this.form.dateSvid || 'Не указано',
                         bik: this.form.bik,
                         cheque: this.form.cheque,
                         fioAutor: this.form.fioAutor,
