@@ -312,6 +312,7 @@
                                 this.form[key] = null
                             }
                             this.$v.$reset()
+                            this.variant = 'success'
                             this.showAlert()
                         }
                     })
