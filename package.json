@@ -15,12 +15,15 @@
     "bootstrap": "^4.6.2",
     "bootstrap-vue": "^2.22.0",
     "core-js": "^3.25.3",
+    "cors": "^2.8.5",
     "nuxt": "^2.15.8",
     "vee-validate": "^4.7.3",
     "vue": "^2.7.10",
+    "vue-axios-cors": "^1.0.1",
     "vue-carousel-3d": "^1.0.1",
     "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "vue-template-compiler": "^2.7.10",
+    "vuelidate": "^0.7.7"
   },
   "devDependencies": {
     "sass": "^1.57.1",

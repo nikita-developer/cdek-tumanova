@@ -36,7 +36,7 @@
                 height="4px"
             ></b-progress>
         </b-alert>
-        <h2>Анкета для заключения договора ИП</h2>
+        <h2>Анкета заключения договора для ИП</h2>
         <b-form class="mt-4" @submit.prevent="submitHandler">
             <b-form-group
                 label="ФИО (индивидуального предпринимателя):"
