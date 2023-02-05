@@ -8,7 +8,6 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item exact active-class="active" to="/">Главная</b-nav-item>
-          <b-nav-item active-class="active" to="/about">О нас</b-nav-item>
           <b-nav-item active-class="active" to="/docs">Документы</b-nav-item>
           <b-nav-item active-class="active" to="/contacts">Контакты</b-nav-item>
         </b-navbar-nav>
